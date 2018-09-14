@@ -1,17 +1,70 @@
 var activeSet={};
-var availableSets=[
-{question:["How to create an array?", "What will the code comsole.log('Hello world') do when run on console?","What is the difference between a const and a let?"],
-answer:["You use [ ] to create an array.", "It will give a Reference error because console was spelt as 'comsole'", "You can't set a new value to const"]},
-{question:["FILL HERE WITH DUTCH STUFF"],
-answer:["FILL HERE WITH DUTCH ANSWERS"]},{question:["What's the capital of Luxemborg?","What's the capital of Spain?", "What's the capital of China?"], answer:["Luxembor!","Madrid!","Pequim!"]}
-]
+
+var availableSets = [];
+
+var javascriptSet = {
+question: ["How to create an array?",
+ "What will the code comsole.log('Hello world') do when run on console?",
+ "What is the difference between a const and a let?"
+ ],
+ answer: ["You use [ ] to create an array.",
+ "It will give a Reference error because console was spelt as 'comsole'",
+ "You can't set a new value to const"
+ ]
+};
+
+var dutch ={
+ question: ["Translate to dutch<br>Good morning",
+ "Translate to dutch<br>Thank you",
+ "Translate to dutch<br>Cross-eyed mother-in-law in Scheveningen"
+ ],
+ answer: ["Goede morgen",
+ "Dank je wel",
+ "Schele schoonmoeder in Scheveningen"
+ ]
+};
+
+var capitals = {
+ question: ["Capital of Portugal",
+ "Capital of Belgium",
+ "Capital of the province North-Holland"
+ ],
+ answer: ["Lisbon",
+ "Brussels",
+ "Haarlem"
+ ]
+};
+
+availableSets.push(javascriptSet);
+availableSets.push(dutch);
+availableSets.push(capitals)
 
 
 
+var cardHeader = document.getElementById('flaschard-header')
+var cardContent = document.getElementById('flashcard-content')
+var qCounter;
+
+function prefillSet(){
+  if(event.target.id === "set-item-0"){
+    activeSet = availableSets[0];
+    console.log(activeSet)
+
+} else if(event.target.id === "set-item-1") {
+  activeSet = availableSets[1];
+  console.log("set 1")
+
+} else if (event.target.id ==="set-item-2"){
+  activeSet = availableSets[2];
+  console.log("set 2")
+}
+var objCounter = activeSet.length
+qCounter = Math.floor(Math.random() * objCounter);
+
+}
 
 var counter = 0
-var objCounter =availableSets[0].length
-var qCounter = Math.floor(Math.random() * objCounter)
+
 function divClick(){
   if(counter === 0){
     getQuestion()
@@ -20,32 +73,23 @@ function divClick(){
   getAnswer();
   return counter=0;
 }
-
-document.getElementsByClassName('set-item').addEventListener("click")
-
-}
-var cardHeader = document.getElementById('flaschard-header')
-var cardContent = document.getElementById('flashcard-content')
-
-function prefillSet(){
-  if(event.target.id === "set-item-1"){
-    activeSet = availableSets[0];
-} else if(event.target.id === "set-item-2") {
-  activeSet = availableSets[1];
-} else if (event.target.id ==="set-item-3"){
-  activeSet = availableSets[2];
 }
 
-}
 
 function getQuestion(){
 cardHeader.innerHTML ="Question"
-cardContent.innerHTML = activeSet.question[0]
+cardContent.innerHTML = activeSet.question[qCounter]
 
 }
 
 function getAnswer(){
   cardHeader.innerHTML ="Answer "
-  cardContent.innerHTML =`The Answer i: ${activeSet.anwser[qCounter]}.`;
-  qCounter = Math.floor(Math.random() * objCounter)
+  cardContent.innerHTML =`The Answer : ${activeSet.answer[qCounter]}.`;
+}
+
+function prefill() {
+  if(event)
+
+
+  activeSet = set
 }
