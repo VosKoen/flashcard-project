@@ -2,6 +2,12 @@
   background-color: red;
   height: 400px;
   width: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+#flashcard-content-div {
+  margin: auto;
 }
 
 #container-nav-main {
@@ -11,15 +17,21 @@
 
 header {
   background-color: green;
+  text-align: center;
+  padding: 30px
 }
 
 nav {
   background-color: blue;
   height: 1000px;
   width: 20%;
+  padding: 20px;
 }
 
 main {
   background-color: yellow;
   width: 80%;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
 }
