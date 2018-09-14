@@ -10,12 +10,7 @@ answer:["FILL HERE WITH DUTCH ANSWERS"]},{question:["What's the capital of Luxem
 
 
 var counter = 0
-var objCounter = function(){
-if(qCounter = Math.floor(Math.random() * objCounter) === qCounter = Math.floor(Math.random() * objCounter)){
-  qCounter = Math.floor(Math.random() * objCounter);
-} else {
-  qCounter = Math.floor(Math.random() * objCounter)}
-}
+var objCounter =availableSets[0].length
 var qCounter = Math.floor(Math.random() * objCounter)
 function divClick(){
   if(counter === 0){
@@ -25,6 +20,9 @@ function divClick(){
   getAnswer();
   return counter=0;
 }
+
+document.getElementsByClassName('set-item').addEventListener("click")
+
 }
 var cardHeader = document.getElementById('flaschard-header')
 var cardContent = document.getElementById('flashcard-content')
@@ -42,7 +40,7 @@ function prefillSet(){
 
 function getQuestion(){
 cardHeader.innerHTML ="Question"
-cardContent.innerHTML = activeSet.question[qCounter]
+cardContent.innerHTML = activeSet.question[0]
 
 }
 
@@ -50,11 +48,4 @@ function getAnswer(){
   cardHeader.innerHTML ="Answer "
   cardContent.innerHTML =`The Answer i: ${activeSet.anwser[qCounter]}.`;
   qCounter = Math.floor(Math.random() * objCounter)
-}
-
-function prefill() {
-  if(event)
-
-
-  activeSet = set
 }
