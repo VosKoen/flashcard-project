@@ -58,8 +58,6 @@ function prefillSet(){
   activeSet = availableSets[2];
   console.log("set 2")
 }
-var objCounter = activeSet.length
-qCounter = Math.floor(Math.random() * objCounter);
 
 }
 
@@ -77,6 +75,13 @@ function divClick(){
 
 
 function getQuestion(){
+  var oldCount = qCounter;
+  var objCounter = activeSet.question.length
+  qCounter = Math.floor(Math.random() * objCounter);
+
+  while(qCounter === oldCount) {
+    qCounter = Math.floor(Math.random() * objCounter);
+  }
 cardHeader.innerHTML ="Question"
 cardContent.innerHTML = activeSet.question[qCounter]
 
