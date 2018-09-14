@@ -1,13 +1,43 @@
 #flashcard-view {
-  background-color: red;
+  background-color: white;
   height: 400px;
   width: 600px;
   display: flex;
   justify-content: center;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 8px;
+  border-color: #FF2F00;
+  background-color: #CDFFED;
 }
 
 #flashcard-content-div {
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+}
+#flashcard-header {
+  height: 40%;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
   margin: auto;
+  margin-bottom: 0;
+  padding: 30px 30px 0px 30px;
+
+}
+
+#flashcard-content {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3em;
+  height:60%;
+  margin:0;
+  padding:0px 20px 0px 20px;
 }
 
 #container-nav-main {
@@ -16,7 +46,8 @@
 }
 
 header {
-  background-color: green;
+  background-color: #00B272;
+  color: #FF2F00;
   text-align: center;
   padding: 30px
 }
@@ -29,7 +60,7 @@ nav {
 }
 
 main {
-  background-color: yellow;
+  background-color: white;
   width: 80%;
   display: flex;
   justify-content: center;
