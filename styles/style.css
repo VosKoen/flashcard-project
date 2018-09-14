@@ -1,0 +1,25 @@
+#flashcard-view {
+  background-color: red;
+  height: 400px;
+  width: 600px;
+}
+
+#container-nav-main {
+  display: flex;
+
+}
+
+header {
+  background-color: green;
+}
+
+nav {
+  background-color: blue;
+  height: 1000px;
+  width: 20%;
+}
+
+main {
+  background-color: yellow;
+  width: 80%;
+}
