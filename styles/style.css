@@ -42,6 +42,16 @@
 
 #container-nav-main {
   display: flex;
+  height: 100%
+}
+
+div.set-item {
+  width: 80px;
+  margin: 5px;
+  padding: 10px;
+  background-color: #FF2F00;
+  border-radius: 15px;
+  text-align: center;
 
 }
 
@@ -55,16 +65,25 @@ header {
 }
 
 nav {
-  background-color: blue;
-  height: 1000px;
-  width: 20%;
+  background-color: #00B272;
+  /* height: 100%; */
+  width: 150px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pacifico', cursive;
+
+}
+
+nav h2 {
+  padding-left: 10px;
 }
 
 main {
   background-color: white;
-  width: 80%;
+  /* width: 80%; */
   display: flex;
+  flex-direction: row;
   justify-content: center;
   padding: 30px;
 }
